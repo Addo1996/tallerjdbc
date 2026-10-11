@@ -22,7 +22,7 @@ public class UpdateVehiculo {
 
             String sql = """
                     UPDATE vehiculos
-                    SET precio = ?, color = ?
+                    SET precio = ?, color = ?, kilometraje = ?
                     WHERE placa = ?
                     """;
 
@@ -30,7 +30,8 @@ public class UpdateVehiculo {
 
             ps.setDouble(1, 19000.00);
             ps.setString(2, "Negro");
-            ps.setString(3, "PCD1234");
+            ps.setInt(3, 60000);
+            ps.setString(4, "ABC5678");
 
             // Se ejecuta el update
             int filas = ps.executeUpdate();

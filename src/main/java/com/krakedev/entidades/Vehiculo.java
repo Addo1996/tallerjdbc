@@ -10,6 +10,7 @@ public class Vehiculo {
     private double precio;
     private String color;
     private boolean disponible;
+    private int kilometraje;
 
     // Constructor vacío
     public Vehiculo() {
@@ -17,7 +18,7 @@ public class Vehiculo {
 
     // Constructor con todos los atributos
     public Vehiculo(String placa, String marca, String modelo,
-            int anio, double precio, String color, boolean disponible) {
+            int anio, double precio, String color, boolean disponible, int kilometraje) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -25,6 +26,7 @@ public class Vehiculo {
         this.precio = precio;
         this.color = color;
         this.disponible = disponible;
+        this.kilometraje = kilometraje;
     }
 
     // Getters y setters
@@ -83,8 +85,17 @@ public class Vehiculo {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
+    
 
-    // Mostrar los datos del vehículo
+    public int getKilometraje() {
+		return kilometraje;
+	}
+
+	public void setKilometraje(int kilometraje) {
+		this.kilometraje = kilometraje;
+	}
+
+	// Mostrar los datos del vehículo
     @Override
     public String toString() {
         return "Vehiculo [placa=" + placa
@@ -93,6 +104,6 @@ public class Vehiculo {
                 + ", anio=" + anio
                 + ", precio=" + precio
                 + ", color=" + color
-                + ", disponible=" + disponible + "]";
+                + ", disponible=" + disponible + ", kilometraje=" + kilometraje +"]";
     }
 }
