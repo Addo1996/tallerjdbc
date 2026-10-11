@@ -26,12 +26,12 @@ public class InsertVehiculos {
             con = Conexion.obtenerConexion();
             ps = con.prepareStatement(sql);
 
-            ps.setString(1, "PCD1234");
-            ps.setString(2, "Toyota");
-            ps.setString(3, "Corolla");
-            ps.setInt(4, 2024);
-            ps.setDouble(5, 18500.00);
-            ps.setString(6, "Blanco");
+            ps.setString(1, "PCD2345");
+            ps.setString(2, "Chevrolet");
+            ps.setString(3, "Camaro");
+            ps.setInt(4, 2020);
+            ps.setDouble(5, 19500.00);
+            ps.setString(6, "Rojo");
             ps.setBoolean(7, true);
 
             int filas = ps.executeUpdate();
